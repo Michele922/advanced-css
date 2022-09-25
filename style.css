@@ -7,28 +7,62 @@ body {
 
 .testimonial-card {
   background-color: #fff;
-  height: 540px;
-  width: 440px;
-  border: solid white 1px;
-  border-radius: 20px;
+  min-height: 300px;
+  max-height: 545px;
+  min-width: 200px;
+  max-width: 440px;
+  border-radius: 25px;
   box-shadow: 5px 10px 20px rgb(144, 144, 144);
-  margin: auto;
+  margin: 20px;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
+.testimonial-text {
+  padding: 40px;
+  padding-bottom: 60px;
+}
 .testimonial-text p {
-  margin: 40px;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  line-height: 32px;
-  color: rgb(94, 82, 82);
+  line-height: 37px;
+  color: #5e5252;
 }
 
 .testimonial-footer {
   background-color: #686de0;
   color: #fff;
+  height: 185px;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-footer .testimonial-footer-image {
+  background-color: aqua;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 7px white solid;
+  margin: -60px auto 0 auto;
+}
+.testimonial-footer .testimonial-footer-text {
+  margin: auto;
+}
+.testimonial-footer .testimonial-author p {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+.testimonial-footer .testimonial-website p {
+  font-family: "Open Sans", sans-serif;
+  color: hsl(238deg, 83%, 84%);
+  margin-top: 5px;
 }
 
+/*#region container*/
 .hero-container {
   display: flex;
   flex-direction: row;
@@ -37,6 +71,7 @@ body {
   background-size: cover;
 }
 
+/*#endregion*/
 /*#region gallery*/
 .gallery-grid {
   box-sizing: border-box;
