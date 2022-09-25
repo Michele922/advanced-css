@@ -2,4 +2,69 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #c3cfe2;
 }
+
+.testimonial-card {
+  background-color: #fff;
+  height: 540px;
+  width: 440px;
+  border: solid white 1px;
+  border-radius: 20px;
+  box-shadow: 5px 10px 20px rgb(144, 144, 144);
+  margin: auto;
+  margin-top: 30px;
+}
+
+.testimonial-text p {
+  margin: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgb(94, 82, 82);
+}
+
+.testimonial-footer {
+  background-color: #686de0;
+  color: #fff;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 75px 0;
+  background-size: cover;
+}
+
+/*#region gallery*/
+.gallery-grid {
+  box-sizing: border-box;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 300px;
+  gap: 20px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*#endregion*/
+/*#region tablet*/
+@media screen and (min-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*#endregion*/
+/*#region desktop*/
+@media screen and (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*#endregion*//*# sourceMappingURL=style.css.map */
