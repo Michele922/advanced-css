@@ -5,6 +5,7 @@ body {
   background-color: #c3cfe2;
 }
 
+/*#region card*/
 .testimonial-card {
   background-color: #fff;
   min-height: 300px;
@@ -19,6 +20,8 @@ body {
   flex-direction: column;
 }
 
+/*#endregion*/
+/*#region text*/
 .testimonial-text {
   padding: 40px;
   padding-bottom: 60px;
@@ -30,6 +33,8 @@ body {
   color: #5e5252;
 }
 
+/*#endregion*/
+/*#region footer*/
 .testimonial-footer {
   background-color: #686de0;
   color: #fff;
@@ -39,9 +44,11 @@ body {
   flex-direction: column;
 }
 .testimonial-footer .testimonial-footer-image {
-  background-color: aqua;
   width: 120px;
   height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-items: center;
   border-radius: 100%;
   border: 7px white solid;
   margin: -60px auto 0 auto;
@@ -62,30 +69,54 @@ body {
   margin-top: 5px;
 }
 
+/*#endregion footer*/
 /*#region container*/
-.hero-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 75px 0;
-  background-size: cover;
-}
-
 /*#endregion*/
 /*#region gallery*/
 .gallery-grid {
   box-sizing: border-box;
   padding: 20px;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: 300px;
   gap: 20px;
 }
-.gallery-grid img {
+.gallery-grid .image-wrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.gallery-grid .image-wrapper img {
+  position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 7px;
+}
+.gallery-grid .image-wrapper .overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #022430;
+  text-align: center;
+  border-radius: 5px;
+}
+.gallery-grid .image-wrapper:hover .overlay {
+  opacity: 1;
+}
+.gallery-grid .image-wrapper .button-readmore {
+  background-color: rgba(255, 255, 255, 0.968);
+  color: black;
+  font-size: 16px;
+  padding: 8px 26px;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, 350%);
 }
 
 /*#endregion*/
