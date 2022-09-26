@@ -9,7 +9,6 @@ body {
 .testimonial-card {
   background-color: #fff;
   min-height: 300px;
-  max-height: 545px;
   min-width: 200px;
   max-width: 440px;
   border-radius: 25px;
@@ -55,9 +54,12 @@ body {
 }
 .testimonial-footer .testimonial-footer-text {
   margin: auto;
+  margin-top: 10px;
 }
 .testimonial-footer .testimonial-author p {
   font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 5px;
   margin-bottom: 0px;
   text-transform: uppercase;
   display: flex;
@@ -70,8 +72,6 @@ body {
 }
 
 /*#endregion footer*/
-/*#region container*/
-/*#endregion*/
 /*#region gallery*/
 .gallery-grid {
   box-sizing: border-box;
@@ -84,39 +84,44 @@ body {
 }
 .gallery-grid .image-wrapper {
   position: relative;
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 .gallery-grid .image-wrapper img {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 7px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery-grid .image-wrapper .overlay {
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   position: absolute;
-  height: 100%;
-  width: 100%;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #022430;
-  text-align: center;
   border-radius: 5px;
+  display: flex;
 }
 .gallery-grid .image-wrapper:hover .overlay {
   opacity: 1;
 }
 .gallery-grid .image-wrapper .button-readmore {
-  background-color: rgba(255, 255, 255, 0.968);
+  background-color: #fff;
+  margin: auto;
   color: black;
   font-size: 16px;
   padding: 8px 26px;
   border-radius: 5px;
-  top: 50%;
-  left: 50%;
-  transform: translate(0%, 350%);
+  cursor: pointer;
+}
+.gallery-grid .image-wrapper .button-readmore:active {
+  background-color: #c3cfe2;
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
 }
 
 /*#endregion*/
@@ -130,7 +135,7 @@ body {
 /*#region desktop*/
 @media screen and (min-width: 1024px) {
   .gallery-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /*#endregion*//*# sourceMappingURL=style.css.map */

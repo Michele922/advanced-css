@@ -1,0 +1,158 @@
+@import "./styles/variables";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $backgroundcolor;
+}
+
+/*#region card*/
+.testimonial-card {
+  background-color: $backgroundcolor-white;
+  min-height: 300px;
+  min-width: 200px;
+  max-width: 440px;
+  border-radius: $border-radius;
+  box-shadow: 5px 10px 20px rgb(144, 144, 144);
+  margin: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+/*#endregion*/
+
+/*#region text*/
+.testimonial-text {
+  padding: $box-padding;
+  padding-bottom: calc($box-padding * 1.5);
+
+  p {
+    font-family: $font-family;
+    font-size: 20px;
+    line-height: 37px;
+    color: $font-color;
+  }
+}
+/*#endregion*/
+
+/*#region footer*/
+.testimonial-footer {
+  background-color: $testemonial-footer-color;
+  color: $testemonial-text-color;
+  height: 185px;
+  border-radius: 0 0 $border-radius $border-radius;
+  display: flex;
+  flex-direction: column;
+
+  .testimonial-footer-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    align-items: center;
+    border-radius: 100%;
+    border: 7px white solid;
+    margin: -60px auto 0 auto;
+  }
+
+  .testimonial-footer-text {
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .testimonial-author {
+    p {
+      font-family: $font-family;
+      font-size: 20px;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .testimonial-website {
+    p {
+      font-family: $font-family;
+      color: hsl(238, 83%, 84%);
+      margin-top: 5px;
+    }
+  }
+}
+/*#endregion footer*/
+
+/*#region gallery*/
+.gallery-grid {
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 300px;
+  gap: 20px;
+
+  .image-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+      object-fit: cover;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: #022430;
+      border-radius: 5px;
+
+      display: flex;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+
+    .button-readmore {
+      background-color: $backgroundcolor-white;
+      margin: auto;
+      color: black;
+      font-size: 16px;
+      padding: 8px 26px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:active {
+        background-color: $backgroundcolor;
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+}
+/*#endregion*/
+
+/*#region tablet*/
+@media screen and (min-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*#endregion*/
+
+/*#region desktop*/
+@media screen and (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*#endregion*/
