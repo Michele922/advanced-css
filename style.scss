@@ -20,9 +20,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-/*#endregion*/
 
-/*#region text*/
 .testimonial-text {
   padding: $box-padding;
   padding-bottom: calc($box-padding * 1.5);
@@ -34,9 +32,6 @@ body {
     color: $font-color;
   }
 }
-/*#endregion*/
-
-/*#region footer*/
 .testimonial-footer {
   background-color: $testemonial-footer-color;
   color: $testemonial-text-color;
@@ -80,7 +75,7 @@ body {
     }
   }
 }
-/*#endregion footer*/
+/*#endregion card*/
 
 /*#region gallery*/
 .gallery-grid {
@@ -142,13 +137,57 @@ body {
 /*#endregion*/
 
 /*#region social-media*/
-.button-group {
-  .social-media-button {
-    .social-media-blog {
-    }
+
+.list-social-media {
+  list-style: none;
+}
+.social-media-button {
+  padding: 10px;
+  background-color: #e3e3e3;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-blog {
+  background-color: #e17b77;
+  .fa-laptop-code::before {
+    content: "\f5fc";
+    color: $backgroundcolor-white;
   }
 }
 
+.button-twitter {
+  background-color: #00aced;
+  .fa-twitter::before {
+    content: "\f099";
+    color: $backgroundcolor-white;
+  }
+}
+
+.button-linkedin {
+  background-color: #007bb6;
+  .fa-linkedin-in::before {
+    content: "\f0e1";
+    color: $backgroundcolor-white;
+  }
+}
+
+.button-facebook {
+  background-color: #3b5998;
+  .fa-facebook-f::before {
+    content: "\f39e";
+    color: $backgroundcolor-white;
+  }
+}
+
+.button-github {
+  background-color: #333;
+  .fa-github::before {
+    content: "\f09b";
+    color: $backgroundcolor-white;
+  }
+}
 /*#endregion*/
 
 /*#region tablet*/
