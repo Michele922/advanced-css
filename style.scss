@@ -138,54 +138,86 @@ body {
 
 /*#region social-media*/
 
-.list-social-media {
-  list-style: none;
-}
-.social-media-button {
-  padding: 10px;
-  background-color: #e3e3e3;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-}
+.social-button-container {
+  position: fixed;
+  top: 50%;
+  right: 0;
 
-.button-blog {
-  background-color: #e17b77;
-  .fa-laptop-code::before {
-    content: "\f5fc";
-    color: $backgroundcolor-white;
-  }
-}
+  .list-social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-.button-twitter {
-  background-color: #00aced;
-  .fa-twitter::before {
-    content: "\f099";
-    color: $backgroundcolor-white;
-  }
-}
+    .social-media-button {
+      padding: 10px;
+      cursor: pointer;
+      width: 30px;
+      transition: width 0.2s;
 
-.button-linkedin {
-  background-color: #007bb6;
-  .fa-linkedin-in::before {
-    content: "\f0e1";
-    color: $backgroundcolor-white;
-  }
-}
+      i {
+        height: 30px;
+        width: 30px;
+      }
 
-.button-facebook {
-  background-color: #3b5998;
-  .fa-facebook-f::before {
-    content: "\f39e";
-    color: $backgroundcolor-white;
-  }
-}
+      a {
+        padding-left: 20px;
+        text-decoration: none;
+        display: none;
+      }
 
-.button-github {
-  background-color: #333;
-  .fa-github::before {
-    content: "\f09b";
-    color: $backgroundcolor-white;
+      &:hover {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        a {
+          display: inline-block;
+
+          color: #e3e3e3;
+        }
+      }
+    }
+
+    .button-blog {
+      background-color: #e17b77;
+      .fa-laptop-code::before {
+        content: "\f5fc";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-twitter {
+      background-color: #00aced;
+      .fa-twitter::before {
+        content: "\f099";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-linkedin {
+      background-color: #007bb6;
+      .fa-linkedin-in::before {
+        content: "\f0e1";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-facebook {
+      background-color: #3b5998;
+      .fa-facebook-f::before {
+        content: "\f39e";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-github {
+      background-color: #333;
+      .fa-github::before {
+        content: "\f09b";
+        color: $backgroundcolor-white;
+      }
+    }
   }
 }
 /*#endregion*/
