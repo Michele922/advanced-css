@@ -1,0 +1,102 @@
+.social-button-container {
+  position: fixed;
+  top: 50%;
+  right: 0;
+
+  .list-social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .social-media-button {
+      transition: width 0.2s;
+      cursor: pointer;
+      padding: 10px;
+      width: 30px;
+
+      i {
+        height: 30px;
+        width: 30px;
+      }
+
+      a {
+        font-family: $font-family;
+        padding-left: 20px;
+        text-decoration: none;
+        display: none;
+      }
+
+      &:hover {
+        width: 250px;
+        display: flex;
+        align-items: center;
+        a {
+          display: inline-block;
+          color: #e3e3e3;
+        }
+      }
+    }
+
+    .button-blog {
+      background-color: #e17b77;
+      .fa-laptop-code::before {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "\f5fc";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-twitter {
+      background-color: #00aced;
+      .fa-twitter::before {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "\f099";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-linkedin {
+      background-color: #007bb6;
+      .fa-linkedin-in::before {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "\f0e1";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-facebook {
+      background-color: #3b5998;
+      .fa-facebook-f::before {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "\f39e";
+        color: $backgroundcolor-white;
+      }
+    }
+
+    .button-github {
+      background-color: #333;
+      .fa-github::before {
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "\f09b";
+        color: $backgroundcolor-white;
+      }
+    }
+  }
+}

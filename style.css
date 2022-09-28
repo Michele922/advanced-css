@@ -1,11 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #c3cfe2;
-}
-
-/*#region card*/
 .testimonial-card {
   background-color: #fff;
   min-height: 300px;
@@ -19,8 +11,6 @@ body {
   flex-direction: column;
 }
 
-/*#endregion*/
-/*#region text*/
 .testimonial-text {
   padding: 40px;
   padding-bottom: 60px;
@@ -32,8 +22,6 @@ body {
   color: #5e5252;
 }
 
-/*#endregion*/
-/*#region footer*/
 .testimonial-footer {
   background-color: #686de0;
   color: #fff;
@@ -71,8 +59,6 @@ body {
   margin-top: 5px;
 }
 
-/*#endregion footer*/
-/*#region gallery*/
 .gallery-grid {
   box-sizing: border-box;
   padding: 20px;
@@ -124,9 +110,106 @@ body {
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
 }
 
-/*#endregion*/
-/*#region social-media*/
-/*#endregion*/
+.social-button-container {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+.social-button-container .list-social-media {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.social-button-container .list-social-media .social-media-button {
+  transition: width 0.2s;
+  cursor: pointer;
+  padding: 10px;
+  width: 30px;
+}
+.social-button-container .list-social-media .social-media-button i {
+  height: 30px;
+  width: 30px;
+}
+.social-button-container .list-social-media .social-media-button a {
+  font-family: "Open Sans", sans-serif;
+  padding-left: 20px;
+  text-decoration: none;
+  display: none;
+}
+.social-button-container .list-social-media .social-media-button:hover {
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+.social-button-container .list-social-media .social-media-button:hover a {
+  display: inline-block;
+  color: #e3e3e3;
+}
+.social-button-container .list-social-media .button-blog {
+  background-color: #e17b77;
+}
+.social-button-container .list-social-media .button-blog .fa-laptop-code::before {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f5fc";
+  color: #fff;
+}
+.social-button-container .list-social-media .button-twitter {
+  background-color: #00aced;
+}
+.social-button-container .list-social-media .button-twitter .fa-twitter::before {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f099";
+  color: #fff;
+}
+.social-button-container .list-social-media .button-linkedin {
+  background-color: #007bb6;
+}
+.social-button-container .list-social-media .button-linkedin .fa-linkedin-in::before {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f0e1";
+  color: #fff;
+}
+.social-button-container .list-social-media .button-facebook {
+  background-color: #3b5998;
+}
+.social-button-container .list-social-media .button-facebook .fa-facebook-f::before {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f39e";
+  color: #fff;
+}
+.social-button-container .list-social-media .button-github {
+  background-color: #333;
+}
+.social-button-container .list-social-media .button-github .fa-github::before {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f09b";
+  color: #fff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c3cfe2;
+}
+
 /*#region tablet*/
 @media screen and (min-width: 480px) {
   .gallery-grid {
